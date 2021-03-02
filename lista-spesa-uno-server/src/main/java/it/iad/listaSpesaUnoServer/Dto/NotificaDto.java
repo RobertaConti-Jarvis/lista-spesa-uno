@@ -3,7 +3,7 @@ package it.iad.listaSpesaUnoServer.Dto;
 
 public class NotificaDto {
     private String notifica;
-
+    
     public NotificaDto() {
     }
 

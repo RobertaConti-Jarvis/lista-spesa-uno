@@ -3,6 +3,8 @@ package it.iad.listaSpesaUnoServer.service.impl;
 import it.iad.listaSpesaUnoServer.model.Prodotto;
 import it.iad.listaSpesaUnoServer.repository.ProdottoRepository;
 import it.iad.listaSpesaUnoServer.service.Servizio;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +27,13 @@ public class ServiceImpProdotto implements Servizio {
         prodottoRepository.deleteAllInBatch();
         System.out.println("Lista Cancellata");
         return "Lista Cancellata";
+    }
+    
+    @Override
+    public List<Prodotto> selectAll() {
+        System.out.println("DB letto");
+        return  prodottoRepository.findAll();
+        
     }
 
 }

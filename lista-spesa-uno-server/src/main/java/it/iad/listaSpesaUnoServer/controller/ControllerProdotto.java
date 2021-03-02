@@ -1,5 +1,6 @@
 package it.iad.listaSpesaUnoServer.controller;
 
+import it.iad.listaSpesaUnoServer.Dto.ContenutoDbDto;
 import it.iad.listaSpesaUnoServer.Dto.NotificaDto;
 import it.iad.listaSpesaUnoServer.model.Prodotto;
 import it.iad.listaSpesaUnoServer.service.Servizio;
@@ -21,10 +22,18 @@ public class ControllerProdotto {
         System.out.println("Sono nel addProdotto()");
         return new NotificaDto(servizio.addProdotto(dtoProdotto.getNome()));
     }
-     @RequestMapping("/elimina-tutto")
+
+    @RequestMapping("/elimina-tutto")
     public NotificaDto deleteAll() {
         System.out.println("Sono nel deleteAll() ");
         return new NotificaDto(servizio.deleteAll());
-        
+
+    }
+
+    @RequestMapping("/carica-dati-da-visualizzare")
+    public ContenutoDbDto selectAll() {
+        System.out.println("Sono nel selectAll() ");
+        return new ContenutoDbDto(servizio.selectAll());
+
     }
 }
