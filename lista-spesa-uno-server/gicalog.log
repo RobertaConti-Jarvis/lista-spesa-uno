@@ -109,3 +109,188 @@
 2021-03-02 11:34:38.218 DEBUG 20640 --- [main] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
 2021-03-02 11:34:38.260 DEBUG 20640 --- [main] org.hibernate.SQL                        : create table prodotto (id bigint not null, nome varchar(255), primary key (id)) engine=InnoDB
 2021-03-02 11:34:38.965  WARN 20640 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-02 12:04:01.114 DEBUG 9012 --- [main] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=InnoDB
+2021-03-02 12:04:01.196 DEBUG 9012 --- [main] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2021-03-02 12:04:01.203 DEBUG 9012 --- [main] org.hibernate.SQL                        : create table prodotto (id bigint not null, nome varchar(255), primary key (id)) engine=InnoDB
+2021-03-02 12:04:01.674  WARN 9012 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-02 14:14:56.140  WARN 9012 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m25s669ms534µs700ns).
+2021-03-02 15:29:56.777 DEBUG 9012 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:29:56.826 DEBUG 9012 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:29:56.916 DEBUG 9012 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:29:56.923 TRACE 9012 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [gianni]
+2021-03-02 15:29:56.925 TRACE 9012 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [1]
+2021-03-02 15:30:02.760 DEBUG 9012 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:30:02.763 DEBUG 9012 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:30:02.782 DEBUG 9012 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:30:02.783 TRACE 9012 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [banana]
+2021-03-02 15:30:02.784 TRACE 9012 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [2]
+2021-03-02 15:30:06.111 DEBUG 9012 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:30:06.112 DEBUG 9012 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:30:06.119 DEBUG 9012 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:30:06.120 TRACE 9012 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [mela]
+2021-03-02 15:30:06.121 TRACE 9012 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [3]
+2021-03-02 15:30:09.255 DEBUG 9012 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:30:09.257 DEBUG 9012 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:30:09.271 DEBUG 9012 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:30:09.273 TRACE 9012 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pera]
+2021-03-02 15:30:09.274 TRACE 9012 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [4]
+2021-03-02 15:41:45.696 DEBUG 9012 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:41:47.170 DEBUG 9012 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:43:52.954  WARN 11420 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-02 15:44:43.283 DEBUG 11420 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:45:15.384 DEBUG 11420 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:45:15.387 DEBUG 11420 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:45:15.428 DEBUG 11420 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:45:15.431 TRACE 11420 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [gianni]
+2021-03-02 15:45:15.433 TRACE 11420 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [5]
+2021-03-02 15:45:21.467 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:45:21.468 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:45:21.483 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:45:21.484 TRACE 11420 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [banana]
+2021-03-02 15:45:21.486 TRACE 11420 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [6]
+2021-03-02 15:45:25.971 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:45:25.972 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:45:25.985 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:45:25.986 TRACE 11420 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [marro]
+2021-03-02 15:45:25.987 TRACE 11420 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [7]
+2021-03-02 15:45:34.140 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:45:34.145 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:45:34.159 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:45:34.160 TRACE 11420 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pere]
+2021-03-02 15:45:34.161 TRACE 11420 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [8]
+2021-03-02 15:45:43.826 DEBUG 11420 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:45:43.827 DEBUG 11420 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:45:43.841 DEBUG 11420 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:45:43.842 TRACE 11420 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [di giorgio]
+2021-03-02 15:45:43.842 TRACE 11420 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [9]
+2021-03-02 15:47:41.994 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:47:42.715 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:50:02.099 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:50:02.101 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:50:02.114 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:50:02.115 TRACE 11420 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [gianni]
+2021-03-02 15:50:02.115 TRACE 11420 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [10]
+2021-03-02 15:50:06.818 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:50:06.819 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:50:06.827 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:50:06.828 TRACE 11420 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [banana]
+2021-03-02 15:50:06.828 TRACE 11420 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [11]
+2021-03-02 15:50:11.173 DEBUG 11420 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:50:11.174 DEBUG 11420 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:50:11.188 DEBUG 11420 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:50:11.189 TRACE 11420 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [mela]
+2021-03-02 15:50:11.190 TRACE 11420 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [12]
+2021-03-02 15:50:15.442 DEBUG 11420 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:50:15.444 DEBUG 11420 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:50:15.452 DEBUG 11420 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:50:15.453 TRACE 11420 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [marro]
+2021-03-02 15:50:15.453 TRACE 11420 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [13]
+2021-03-02 15:50:32.453 DEBUG 11420 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:50:33.724 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:50:33.938 DEBUG 11420 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:50:34.150 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:50:34.398 DEBUG 11420 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:50:34.588 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:50:34.766 DEBUG 11420 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:50:34.975 DEBUG 11420 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:56:36.818 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:56:36.820 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:56:36.836 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:56:36.837 TRACE 11420 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [gianni]
+2021-03-02 15:56:36.838 TRACE 11420 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [14]
+2021-03-02 15:56:37.899 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:56:38.951 DEBUG 11420 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:56:43.422 DEBUG 11420 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:56:43.424 DEBUG 11420 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:56:43.439 DEBUG 11420 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:56:43.439 TRACE 11420 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [gianni]
+2021-03-02 15:56:43.440 TRACE 11420 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [15]
+2021-03-02 15:56:46.238 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:56:46.240 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:56:46.259 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:56:46.261 TRACE 11420 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [mela]
+2021-03-02 15:56:46.261 TRACE 11420 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [16]
+2021-03-02 15:56:49.805 DEBUG 11420 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:56:49.806 DEBUG 11420 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:56:49.813 DEBUG 11420 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:56:49.814 TRACE 11420 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [marro]
+2021-03-02 15:56:49.814 TRACE 11420 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [17]
+2021-03-02 15:56:54.080 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:56:54.081 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:56:54.092 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:56:54.093 TRACE 11420 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [merda]
+2021-03-02 15:56:54.093 TRACE 11420 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [18]
+2021-03-02 15:56:57.697 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:56:57.698 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:56:57.705 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:56:57.706 TRACE 11420 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [banana]
+2021-03-02 15:56:57.706 TRACE 11420 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [19]
+2021-03-02 15:56:59.282 DEBUG 11420 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:57:04.641 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:57:05.468 DEBUG 11420 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:57:06.756 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:59:17.662 DEBUG 11420 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:59:21.182 DEBUG 11420 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:59:21.656 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:59:21.867 DEBUG 11420 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:59:22.362 DEBUG 11420 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 15:59:29.473 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 15:59:29.475 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 15:59:29.484 DEBUG 11420 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 15:59:29.485 TRACE 11420 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [gianni]
+2021-03-02 15:59:29.486 TRACE 11420 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [20]
+2021-03-02 16:02:54.687 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 16:02:56.143 DEBUG 11420 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 16:03:03.151 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:03:03.153 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:03:03.162 DEBUG 11420 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:03:03.164 TRACE 11420 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [gianni]
+2021-03-02 16:03:03.165 TRACE 11420 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [21]
+2021-03-02 16:03:08.166 DEBUG 11420 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:03:08.167 DEBUG 11420 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:03:08.175 DEBUG 11420 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:03:08.176 TRACE 11420 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [mela]
+2021-03-02 16:03:08.176 TRACE 11420 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [22]
+2021-03-02 16:03:15.774 DEBUG 11420 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:03:15.775 DEBUG 11420 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:03:15.782 DEBUG 11420 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:03:15.783 TRACE 11420 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pera]
+2021-03-02 16:03:15.784 TRACE 11420 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [23]
+2021-03-02 16:03:23.815 DEBUG 11420 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:03:23.815 DEBUG 11420 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:03:23.822 DEBUG 11420 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:03:23.824 TRACE 11420 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [uova]
+2021-03-02 16:03:23.824 TRACE 11420 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [24]
+2021-03-02 16:03:27.200 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:03:27.201 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:03:27.212 DEBUG 11420 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:03:27.215 TRACE 11420 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [marro]
+2021-03-02 16:03:27.216 TRACE 11420 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [25]
+2021-03-02 16:03:29.323 DEBUG 11420 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : delete from prodotto
+2021-03-02 16:24:22.406  WARN 4664 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-02 16:25:02.491 DEBUG 4664 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:25:02.499 DEBUG 4664 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:25:02.532 DEBUG 4664 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:25:02.536 TRACE 4664 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [gianni]
+2021-03-02 16:25:02.538 TRACE 4664 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [26]
+2021-03-02 16:25:08.348 DEBUG 4664 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:25:08.350 DEBUG 4664 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:25:08.362 DEBUG 4664 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:25:08.364 TRACE 4664 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [marro]
+2021-03-02 16:25:08.365 TRACE 4664 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [27]
+2021-03-02 16:25:13.625 DEBUG 4664 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:25:13.627 DEBUG 4664 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:25:13.640 DEBUG 4664 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:25:13.641 TRACE 4664 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [banana]
+2021-03-02 16:25:13.641 TRACE 4664 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [28]
+2021-03-02 16:25:17.020 DEBUG 4664 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:25:17.021 DEBUG 4664 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:25:17.033 DEBUG 4664 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:25:17.035 TRACE 4664 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pera]
+2021-03-02 16:25:17.037 TRACE 4664 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [29]
+2021-03-02 16:25:21.158 DEBUG 4664 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-02 16:25:21.159 DEBUG 4664 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-02 16:25:21.172 DEBUG 4664 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-02 16:25:21.173 TRACE 4664 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [di giorgio]
+2021-03-02 16:25:21.174 TRACE 4664 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [30]
+2021-03-02 16:25:28.274 DEBUG 4664 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : delete from prodotto
