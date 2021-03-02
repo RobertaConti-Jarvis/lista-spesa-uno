@@ -1,38 +1,44 @@
-<div class="bgdesk">
-  <h2>Lista della Spesa</h2>
-  <hr>
-  <div class="center">
-    <table>
-      <tr>
-        <td>
-          <label class="thfont">PRODOTTO:</label>
-          <br>
-          <input type="text" [(ngModel)]="prodotto.nome" placeholder="Inserisci nome prodotto">
-        </td>
-        <button (click)="addProdotto()">Aggiungi</button>
-      
-        <button (click)="deleteAll()">Reset</button>
-        {{messaggioNotifica}}
-
-
-      </tr>
-    </table>
-
+<body OnLoad="leggiDB()">
+  <div class="bgdesk">
+    <h2>Lista della Spesa</h2>
     <hr>
-    <div class="scrodiv">
+    <div class="center">
       <table>
         <tr>
-          <th class="td0, thfont"> </th>
-          <th class="td1, thfont">NOME PRODOTTO</th>
-          <th class="td1, thfont"> </th>
-
+          <td>
+            <label class="thfont">Prodotto: </label>
+            <input type="text" [(ngModel)]="prodotto.nome" placeholder="Inserisci nome prodotto">
+          </td>
+          <td>
+          <button (click)="addProdotto()">Aggiungi</button>
+        </td>
+        <td>
+          <button (click)="leggiDB()">Carica</button>
+        </td>
         </tr>
-
-        <tr *ngFor="let p of listaSpesa ; index as i">
-          <td class="td1">{{p.nome}}</td>
-        </tr>
-
       </table>
+
+      <hr>
+      <div class="scrodiv">
+        <table>
+          <tr>
+            <th class="td1, thfont">NOME PRODOTTO</th>
+          </tr>
+          <tr *ngFor="let p of listaSpesa ; index as i">
+            <td class="td1">{{p.nome}}</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table>
+          <td class="tdleft">
+          {{messaggioNotifica}}
+        </td>
+        <td class="tdright">
+          <button (click)="deleteAll()">Reset</button>
+        </td>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+</body>
