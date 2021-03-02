@@ -1,5 +1,6 @@
 package it.iad.listaSpesaUnoServer.controller;
 
+import it.iad.listaSpesaUnoServer.Dto.NotificaDto;
 import it.iad.listaSpesaUnoServer.model.Prodotto;
 import it.iad.listaSpesaUnoServer.service.Servizio;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,14 @@ public class ControllerProdotto {
     private Servizio servizio;
 
     @RequestMapping("/aggiungi")
-    public void addProdotto(@RequestBody Prodotto dtoProdotto) {
-        System.out.println("Sono nel Controller Aggiungi prodotto");
-        servizio.addProdotto(dtoProdotto.getNome());
+    public NotificaDto addProdotto(@RequestBody Prodotto dtoProdotto) {
+        System.out.println("Sono nel addProdotto()");
+        return new NotificaDto(servizio.addProdotto(dtoProdotto.getNome()));
     }
      @RequestMapping("/elimina-tutto")
-    public void deleteAll() {
-        System.out.println("Sono nel controllo Elimina tutti i campi");
-        servizio.deleteAll();
+    public NotificaDto deleteAll() {
+        System.out.println("Sono nel deleteAll() ");
+        return new NotificaDto(servizio.deleteAll());
+        
     }
 }

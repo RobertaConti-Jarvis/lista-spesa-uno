@@ -2,7 +2,7 @@ package it.iad.listaSpesaUnoServer.service;
 
 public interface Servizio {
 
-    void addProdotto(String nome);
+    String addProdotto(String nome);
 
-    void deleteAll();
+    String deleteAll();
 }

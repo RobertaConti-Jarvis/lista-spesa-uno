@@ -13,30 +13,18 @@ public class ServiceImpProdotto implements Servizio {
     ProdottoRepository prodottoRepository;
 
     @Override
-    public void addProdotto(String nome) {
+    public String addProdotto(String nome) {
         Prodotto prodotto = new Prodotto(nome);
         prodottoRepository.save(prodotto);
         System.out.println("Nuovo prodotto Aggiunto");
+        return "Prodotto Inserito";
     }
 
     @Override
-    public void deleteAll() {
+    public String deleteAll() {
         prodottoRepository.deleteAllInBatch();
-        System.out.println("Nuovo prodotto Aggiunto");
+        System.out.println("Lista Cancellata");
+        return "Lista Cancellata";
     }
 
-//    @Override
-//    public void prodotto() {
-//        personaRepository.deleteAllInBatch();
-//        Persona p = new Persona("Mario", "Rossi", LocalDate.now());
-//
-//        List<Persona> lista = personaRepository.findAll();
-//        System.out.println(lista);
-//        System.out.println("---------------");
-//        lista.forEach(q -> System.out.println(q));
-//        System.out.println("---------------");
-//        for (Persona per : lista) {
-//            System.out.println(per);
-//        }
-//    }
 }
