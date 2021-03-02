@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>it.iad</groupId>
-	<artifactId>jpademo</artifactId>
+	<artifactId>lista-spesa-uno-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jpademo</name>
+	<name>lista-spesa-uno-server</name>
 	<description>Demo project for JPA</description>
 	<properties>
 		<java.version>11</java.version>
