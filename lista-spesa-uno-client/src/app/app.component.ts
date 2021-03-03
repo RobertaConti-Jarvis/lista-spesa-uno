@@ -16,15 +16,26 @@ export class AppComponent {
   messaggioNotifica: string;
 
   title = 'lista-spesa-uno-client';
+  ButtonImg: boolean = true;
 
   constructor(private http: HttpClient) { }
-  
+
   leggiDB() {
+
+    this.ButtonImg = false;
     let oss: Observable<DtoContenutoDB> = this.http
       .get<DtoContenutoDB>('http://localhost:8080/carica-dati-da-visualizzare');
     oss.subscribe(d => this.listaSpesa = d.contenutoDB);
+    if (this.listaSpesa == []) {
+      this.messaggioNotifica = "Nessun Prodotto nella Lista"
+    } else {
+      this.messaggioNotifica = "Lista della Spesa Caricata"
+
+    }
+
   }
-  
+
+
   addProdotto() {
     if (this.prodotto.nome != "") {
       let dtoP: DtoProdotto = new DtoProdotto();
@@ -34,7 +45,7 @@ export class AppComponent {
       oss.subscribe(n => this.messaggioNotifica = n.notifica);
       this.listaSpesa.push(this.prodotto);
       this.prodotto = new DtoProdotto();
-      this.messaggioNotifica = "";
+
     }
   }
 
@@ -43,7 +54,7 @@ export class AppComponent {
       .get<DtoNotifica>('http://localhost:8080/elimina-tutto');
     oss.subscribe(n => this.messaggioNotifica = n.notifica);
     this.listaSpesa.splice(0);
-    this.messaggioNotifica = "";
+
   }
 
 
