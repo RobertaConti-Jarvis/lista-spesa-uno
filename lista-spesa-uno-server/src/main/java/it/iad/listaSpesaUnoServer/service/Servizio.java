@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface Servizio {
 
-    String addProdotto(String nome);
+    List<Prodotto> addProdotto(String nome);
 
-    String deleteAll();
+    List<Prodotto> deleteAll();
     
     List<Prodotto> selectAll();
 }

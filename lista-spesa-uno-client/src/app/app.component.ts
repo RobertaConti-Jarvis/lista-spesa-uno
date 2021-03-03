@@ -18,23 +18,21 @@ export class AppComponent {
   title = 'lista-spesa-uno-client';
   ButtonImg: boolean = true;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.leggiDB();
+  }
 
   leggiDB() {
-
     this.ButtonImg = false;
     let oss: Observable<DtoContenutoDB> = this.http
       .get<DtoContenutoDB>('http://localhost:8080/carica-dati-da-visualizzare');
     oss.subscribe(d => this.listaSpesa = d.contenutoDB);
     if (this.listaSpesa == []) {
-      this.messaggioNotifica = "Nessun Prodotto nella Lista"
+      this.messaggioNotifica = "Nessun Prodotto nella Lista";
     } else {
-      this.messaggioNotifica = "Lista della Spesa Caricata"
-
+      this.messaggioNotifica = "Lista della Spesa Caricata";
     }
-
   }
-
 
   addProdotto() {
     if (this.prodotto.nome != "") {
@@ -45,7 +43,6 @@ export class AppComponent {
       oss.subscribe(n => this.messaggioNotifica = n.notifica);
       this.listaSpesa.push(this.prodotto);
       this.prodotto = new DtoProdotto();
-
     }
   }
 
@@ -53,8 +50,6 @@ export class AppComponent {
     let oss: Observable<DtoNotifica> = this.http
       .get<DtoNotifica>('http://localhost:8080/elimina-tutto');
     oss.subscribe(n => this.messaggioNotifica = n.notifica);
-    this.listaSpesa.splice(0);
-
   }
 
 
