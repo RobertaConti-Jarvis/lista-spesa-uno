@@ -1,7 +1,5 @@
 <div class="bgdesk">
-
   <h2>Lista della Spesa</h2>
-
   <hr>
   <div class="center">
     <table>
@@ -13,33 +11,21 @@
         <td>
           <button (click)="addProdotto()">Aggiungi</button>
         </td>
-
       </tr>
     </table>
-
     <hr>
-
-
     <div class="scrodiv">
-
       <table>
         <tr>
           <th class="td1, thfont">LA TUA LISTA</th>
-        </tr>
-        <tr *ngIf="ButtonImg">
-          <button class="immaginegrande" data-tooltip="Carica Lista Salvata" (click)="leggiDB()"></button>
         </tr>
         <tr *ngFor="let p of listaSpesa ; index as i">
           <td class="td1">{{p.nome}}</td>
         </tr>
       </table>
     </div>
-
     <div>
       <table>
-        <td class="tdleft">
-          {{messaggioNotifica}}
-        </td>
         <td class="tdright">
           <button (click)="deleteAll()">Reset</button>
         </td>
