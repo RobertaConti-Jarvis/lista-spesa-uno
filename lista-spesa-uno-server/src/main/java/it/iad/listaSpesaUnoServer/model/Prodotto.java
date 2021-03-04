@@ -21,6 +21,10 @@ public class Prodotto {
         this.nome = nome;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -28,5 +32,4 @@ public class Prodotto {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
 }

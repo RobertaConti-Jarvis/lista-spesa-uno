@@ -7,13 +7,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages= {"it.iad.listaspesaunoserver"})
-@EnableJpaRepositories(basePackages= {"it.iad.listaspesaunoserver"})
-@EntityScan(basePackages= {"it.iad.listaspesaunoserver"})
+@ComponentScan(basePackages = {"it.iad.listaspesaunoserver"})
+@EnableJpaRepositories(basePackages = {"it.iad.listaspesaunoserver"})
+@EntityScan(basePackages = {"it.iad.listaspesaunoserver"})
 public class ListaSpesaUnoServerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ListaSpesaUnoServerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ListaSpesaUnoServerApplication.class, args);
+    }
 
 }

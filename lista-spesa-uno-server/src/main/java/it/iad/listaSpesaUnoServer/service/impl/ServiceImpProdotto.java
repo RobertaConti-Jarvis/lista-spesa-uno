@@ -22,17 +22,23 @@ public class ServiceImpProdotto implements Servizio {
     }
 
     @Override
+    public List<Prodotto> delete(Long id) {
+        prodottoRepository.deleteById(id);
+        System.out.println("Prodotto Cancellato");
+        return selectAll();
+    }
+
+    @Override
     public List<Prodotto> deleteAll() {
         prodottoRepository.deleteAllInBatch();
         System.out.println("Lista Cancellata");
         return selectAll();
     }
-    
+
     @Override
     public List<Prodotto> selectAll() {
         System.out.println("DB letto");
-        return  prodottoRepository.findAll();
-        
-    }
+        return prodottoRepository.findAll();
 
+    }
 }

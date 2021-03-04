@@ -6,6 +6,8 @@ import java.util.List;
 public interface Servizio {
 
     List<Prodotto> addProdotto(String nome);
+    
+    List<Prodotto> delete(Long id);
 
     List<Prodotto> deleteAll();
     

@@ -95,14 +95,14 @@ select {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 11px;
     text-align: center;
-    width: 10px;
+    width: 10%;
 }
 
 .td1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     text-align: center;
-    width: 100px;
+    width: 90%;
 }
 
 .tdleft {
@@ -144,6 +144,15 @@ th {
     background-color: #bdd2ee;
     color: rgb(44, 44, 44);
     height: 30px;
+}
+
+.buttonerase {
+    width: 25px;
+    height: 25px;
+    background-image: url('img\cestino.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
 }
 
 [data-tooltip]:before {

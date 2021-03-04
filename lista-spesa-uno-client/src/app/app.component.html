@@ -18,9 +18,14 @@
       <table>
         <tr>
           <th class="td1, thfont">LA TUA LISTA</th>
+          <th class="td0, thfont"></th>
         </tr>
         <tr *ngFor="let p of listaSpesa ; index as i">
           <td class="td1">{{p.nome}}</td>
+          <!--Gestione Bottone Rimuovi-->
+          <td class="td0">
+            <button data-tooltip="Rimuovi prodotto" class="buttonerase" (click)="delete(i)"></button>
+          </td>
         </tr>
       </table>
     </div>

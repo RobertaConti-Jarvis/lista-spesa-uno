@@ -12,6 +12,7 @@ import { DtoContenutoDB } from './dto_contenutoDB';
 export class AppComponent {
   prodotto: string;
   listaSpesa: DtoProdotto[] = [];
+  deselectB: boolean[] = [];
 
   title = 'lista-spesa-uno-client';
 
@@ -42,6 +43,12 @@ export class AppComponent {
     oss.subscribe(d => this.listaSpesa = d.contenutoDB);
   }
 
-
-
+  delete(i: number) {
+    let dtoP: DtoProdotto = new DtoProdotto();
+    dtoP.id = this.listaSpesa[i].id;
+    dtoP.nome = this.listaSpesa[i].nome;
+    let oss: Observable<DtoContenutoDB> = this.http
+      .post<DtoContenutoDB>('http://localhost:8080/elimina', dtoP);
+    oss.subscribe(d => this.listaSpesa = d.contenutoDB);
+  }
 }
