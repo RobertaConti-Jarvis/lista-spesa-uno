@@ -1,6 +1,6 @@
-package it.iad.listaSpesaUnoServer.Dto;
+package it.iad.listaspesaunoserver.Dto;
 
-import it.iad.listaSpesaUnoServer.model.Prodotto;
+import it.iad.listaspesaunoserver.model.Prodotto;
 import java.util.ArrayList;
 import java.util.List;
 

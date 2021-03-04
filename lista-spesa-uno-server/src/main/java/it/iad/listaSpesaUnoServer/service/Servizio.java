@@ -1,6 +1,6 @@
-package it.iad.listaSpesaUnoServer.service;
+package it.iad.listaspesaunoserver.service;
 
-import it.iad.listaSpesaUnoServer.model.Prodotto;
+import it.iad.listaspesaunoserver.model.Prodotto;
 import java.util.List;
 
 public interface Servizio {

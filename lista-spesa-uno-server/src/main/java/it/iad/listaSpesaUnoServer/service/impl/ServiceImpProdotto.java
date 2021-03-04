@@ -1,9 +1,8 @@
-package it.iad.listaSpesaUnoServer.service.impl;
+package it.iad.listaspesaunoserver.service.impl;
 
-import it.iad.listaSpesaUnoServer.model.Prodotto;
-import it.iad.listaSpesaUnoServer.repository.ProdottoRepository;
-import it.iad.listaSpesaUnoServer.service.Servizio;
-import java.util.ArrayList;
+import it.iad.listaspesaunoserver.model.Prodotto;
+import it.iad.listaspesaunoserver.repository.ProdottoRepository;
+import it.iad.listaspesaunoserver.service.Servizio;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

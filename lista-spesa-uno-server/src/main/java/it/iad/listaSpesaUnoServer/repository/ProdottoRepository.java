@@ -1,5 +1,5 @@
-package it.iad.listaSpesaUnoServer.repository;
-import it.iad.listaSpesaUnoServer.model.Prodotto;
+package it.iad.listaspesaunoserver.repository;
+import it.iad.listaspesaunoserver.model.Prodotto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

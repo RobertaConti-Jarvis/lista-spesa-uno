@@ -1,8 +1,8 @@
-package it.iad.listaSpesaUnoServer.controller;
+package it.iad.listaspesaunoserver.controller;
 
-import it.iad.listaSpesaUnoServer.Dto.ContenutoDbDto;
-import it.iad.listaSpesaUnoServer.model.Prodotto;
-import it.iad.listaSpesaUnoServer.service.Servizio;
+import it.iad.listaspesaunoserver.Dto.ContenutoDbDto;
+import it.iad.listaspesaunoserver.model.Prodotto;
+import it.iad.listaspesaunoserver.service.Servizio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;

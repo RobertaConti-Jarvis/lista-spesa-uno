@@ -1,4 +1,4 @@
-package it.iad.listaSpesaUnoServer;
+package it.iad.listaspesaunoserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

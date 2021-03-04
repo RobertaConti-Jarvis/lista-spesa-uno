@@ -1,4 +1,4 @@
-package it.iad.listaSpesaUnoServer.model;
+package it.iad.listaspesaunoserver.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
