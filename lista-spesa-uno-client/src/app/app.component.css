@@ -13,16 +13,25 @@
 }
 
 .immaginegrande {
-    background-image: url('img\spesa.png');
-    background-size: 140px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 150px;
-    height: 150px;
+
+    width: 70px;
+    height: 70px;
     float: center;
 }
 table {
     width: 100%;
+}
+.tdcol1{
+    width: 25%;
+}
+.tdcol2{
+    width: 40%;
+}
+.tdcol3{
+    width: 10%;
+}
+.tdcol4{
+    width: 25%;
 }
 
 input {
