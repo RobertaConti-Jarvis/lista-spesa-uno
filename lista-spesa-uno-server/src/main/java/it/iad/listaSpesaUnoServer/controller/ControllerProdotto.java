@@ -25,7 +25,7 @@ public class ControllerProdotto {
     @RequestMapping("/elimina-tutto")
     public ContenutoDbDto deleteAll() {
         System.out.println("Sono nel deleteAll() ");
-        return new ContenutoDbDto(servizio.selectAll());
+        return new ContenutoDbDto(servizio.deleteAll());
 
     }
 
